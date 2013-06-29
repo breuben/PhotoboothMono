@@ -43,6 +43,12 @@ namespace PhotoboothMono
 			EnterFullscreenMode();
 			ShowPrompt();
 			StartMonitoringImageDirectory();
+			Cursor.Hide();
+		}
+
+		private void KioskWindow_FormClosed(object sender, EventArgs e)
+		{
+			Cursor.Show();
 		}
 
 		private void KioskWindow_KeyUp(object sender, KeyEventArgs e)
@@ -58,8 +64,8 @@ namespace PhotoboothMono
 			this.WindowState = FormWindowState.Normal;
 			this.FormBorderStyle = FormBorderStyle.None;
 			this.WindowState = FormWindowState.Maximized;
-
 		}
+
 		private void StartMonitoringImageDirectory()
 		{
 			try

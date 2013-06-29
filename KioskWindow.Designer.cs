@@ -40,14 +40,11 @@
 			this.Name = "KioskWindow";
 			this.Text = "KioskWindow";
 			this.Load += new System.EventHandler(this.KioskWindow_Load);
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KioskWindow_FormClosed);
 			this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KioskWindow_KeyUp);
 			this.ResumeLayout(false);
-
 		}
 
 		#endregion
-
-
-
 	}
 }
